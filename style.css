@@ -1,0 +1,229 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo
+{
+    font-size: 2em;
+    color: #e4e4e4;
+    user-select: none;
+}
+.nav a
+{
+    position: relative;
+    font-size: 1.1em;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.nav a::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    left: 0;
+    transform-origin: right;
+    bottom: -7px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+.nav a:hover::after
+{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.nav .log-btn
+{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #e4e4e4;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.nav .log-btn:hover
+{
+    background: #fff;
+    color: black;
+}
+.wrapper
+{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: .5s ease;
+}
+.wrapper.popup
+{
+    transform: scale(1);
+}
+.wrapper .formlog
+{
+    width: 100%;
+    padding: 40px;
+}
+.icon-close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.formlog h2
+{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top: -5px;
+}
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.input-box .icon
+{
+    position: absolute;
+    right: 8px;
+    font-size:1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember
+{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember label input
+{
+    accent-color: #162938;
+    margin-right: 10px;
+    font-size: .5em;
+}
+.remember a
+{
+    color: #162938;
+    text-decoration: none;
+}
+.remember a:hover
+{
+    text-decoration: underline;
+}
+.btn
+{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+.reg
+{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.reg p a
+{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600; 
+}
+.reg p a:hover
+{
+    text-decoration: underline;
+}
